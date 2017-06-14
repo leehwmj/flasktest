@@ -1,0 +1,14 @@
+<a href="/create">글쓰기</a>
+글 목록
+{#{{ result }}#}
+
+
+{% for r in result %}\
+    {{ r }}
+<div style="margin-bottom:10px; border-bottom:solid 1px;">
+    <div style="clear:both; font-weight: bold;">
+        <a href="/view/{{ r.id.S }}">{{ r.subject.S }}</a>
+    </div>
+    <div style="clear:both;">{{ r.content.S }}</div>
+</div>
+{% endfor %}
